@@ -1,0 +1,39 @@
+{
+    "prefix": " ",
+    "dataset": "cifar224",
+    "class_size":100,
+    "memory_size": 0,
+    "memory_per_class": 0,
+    "fixed_memory": false,
+    "shuffle": false,
+    "init_cls": 40,
+    "increment": 40,
+    "model_name": "coda_prompt",
+    "backbone_type": "vit_base_patch16_224_coda_prompt",
+    "device": ["1"],
+    "seed": [0],
+    
+    "tuned_epoch": 5,
+    "init_lr": 0.001,
+    "batch_size": 128,
+    "weight_decay": 0,
+    "min_lr": 1e-5,
+    "optimizer": "adam",
+    "scheduler": "constant", 
+    "reinit_optimizer": true,
+
+    "pretrained": true,
+    "drop": 0.0,
+    "drop_path": 0.0,
+
+    "prompt_param": [100, 8.0, 0.0],
+    "freeze": ["blocks", "patch_embed", "cls_token", "norm", "pos_embed"],
+    
+    "replace_augment": false,
+    "print_forget":true,
+    "beta":0.3,
+    "save_heatmap":false,
+    "aug_type":1,
+    "adaptive_beta": true,  
+    "beta_strategy": "performance_based"
+}
